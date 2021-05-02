@@ -29,6 +29,10 @@ function intToPhonetic(currInt){
         //  no infinite loop when currInt is negative
         currInt = Math.abs(currInt)
         //get all the digits and add the phonetic to digitsToWord
+        if(currInt === 0){
+            return "Zero";
+        }
+
         while(currInt > 0){
             digitsToWord.push(numbers[currInt % 10]);
             currInt = Math.floor(currInt / 10);
